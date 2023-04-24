@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {UserDataService} from "../services/user-data.service";
+import {UserDataService} from "../services/userData/user-data.service";
 import { Router } from '@angular/router';
 
 @Component({
@@ -34,7 +34,7 @@ export class AjoutUtilisateurComponent {
       (newUser) => {
         console.log('User created:', newUser);
         // Gérer la création réussie de l'utilisateur ici (redirection, affichage d'un message, etc.)
-        this.router.navigate(['/liste-utilisateur']);
+        this.router.navigate(['/users']);
       },
       (error) => {
         console.error('Error:', error);

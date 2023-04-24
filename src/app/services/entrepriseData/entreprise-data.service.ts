@@ -1,0 +1,31 @@
+import { Injectable } from '@angular/core';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {User} from "../../models/user.model";
+import {Entreprise} from "../../models/entreprise.model";
+import {porteEntreprise} from "../../models/porteEntreprise.model";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EntrepriseDataService {
+
+  private apiUrl = 'http://localhost:3000/api';
+  private apiUrlEntreprise = 'http://localhost:3000/api/entreprise';
+  private apiKey = 'testicule';
+  private _id: any;
+
+  constructor(private http: HttpClient) {
+  }
+
+  getEntreprises(): Observable<Entreprise[]> {
+    const headers = new HttpHeaders({'x-api-key': this.apiKey});
+    return this.http.get<Entreprise[]>(`${this.apiUrl}/entreprises`, {headers});
+  }
+
+  getPorteEntreprises(id: any): Observable<porteEntreprise[]> {
+    this._id = id;
+    const headers = new HttpHeaders({'x-api-key': this.apiKey});
+    return this.http.get<porteEntreprise[]>(`${this.apiUrlEntreprise}/${id}/doors`, {headers});
+  }
+}

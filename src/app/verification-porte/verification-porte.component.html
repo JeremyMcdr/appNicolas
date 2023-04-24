@@ -1,0 +1,48 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <h1>STRUCTURE</h1>
+    <label for="structure">Nom:</label>
+    <input type="text" id="structure" formControlName="structure">
+  </div>
+  <div>
+    <h1>ORGANES DE LIAISON ET DE SUSPENSION</h1>
+    <label for="organe">Email:</label>
+    <input type="text" id="organe" formControlName="organe">
+  </div>
+  <div>
+    <h1>TABLIER</h1>
+    <label for="tablier">Message:</label>
+    <input type="text" id="tablier" formControlName="tablier">
+  </div>
+  <div>
+    <h1>MECANISME</h1>
+    <label for="mecanisme">Message:</label>
+    <input type="text" id="mecanisme" formControlName="mecanisme">
+  </div>
+  <div>
+    <h1>DISPOSITIF D'ARRET ET DE MAINTIEN A L'ARRET</h1>
+    <label for="dispoArretMaintien">Message:</label>
+    <input type="text" id="dispoArretMaintien" formControlName="dispoArretMaintien">
+  </div>
+  <div>
+    <h1>DISPOSITIFS DE SECURITE</h1>
+    <label for="dispoSecu">Message:</label>
+    <input type="text" id="dispoSecu" formControlName="dispoSecu">
+  </div>
+  <div>
+    <h1>MANOEUVRE DE DEPANNAGE</h1>
+    <label for="manoeuvre">Message:</label>
+    <input type="text" id="manoeuvre" formControlName="manoeuvre">
+  </div>
+  <div>
+    <h1>SIGNALISATION / ECLAIRAGE</h1>
+    <label for="signalisation">Message:</label>
+    <input type="text" id="signalisation" formControlName="signalisation">
+  </div>
+  <div>
+    <h1>EQUIPEMENT ELECTRIQUE</h1>
+    <label for="equipementElect">Message:</label>
+    <input type="text" id="equipementElect" formControlName="equipementElect">
+  </div>
+  <button type="submit">Envoyer</button>
+</form>

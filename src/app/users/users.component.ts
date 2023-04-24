@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {UserDataService} from "../services/user-data.service";
+import {Component, OnInit} from '@angular/core';
+import {UserDataService} from "../services/userData/user-data.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
-export class UsersComponent {
+export class UsersComponent implements OnInit{
   users: any[] = [];
   constructor(private userDataService: UserDataService, private router: Router) { this.loadUsers(); }
 

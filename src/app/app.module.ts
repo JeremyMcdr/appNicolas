@@ -6,9 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { AjoutUtilisateurComponent } from './ajout-utilisateur/ajout-utilisateur.component';
-import {FormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { DefaultComponent } from './default/default.component';
+import { EntreprisesComponent } from './entreprises/entreprises.component';
+import { VerificationPorteComponent } from './verification-porte/verification-porte.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { FooterComponent } from './footer/footer.component';
     AjoutUtilisateurComponent,
     HeaderComponent,
     FooterComponent,
+    LoginComponent,
+    DefaultComponent,
+    EntreprisesComponent,
+    VerificationPorteComponent,
 
   ],
   imports: [
@@ -24,7 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
