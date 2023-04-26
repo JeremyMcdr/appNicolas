@@ -1,3 +1,4 @@
+
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div>
     <h1>STRUCTURE</h1>
@@ -44,6 +45,102 @@
     <label for="equipementElect">Message:</label>
     <input type="text" id="equipementElect" formControlName="equipementElect">
   </div>
-  <button type="submit">Envoyer</button> | <button (click)="generatePDF()">Générer PDF</button>
-
+  <button type="submit">Sauvegarder</button>
 </form>
+
+<style>
+  table {
+    border-collapse: collapse;
+    border: 2px solid black;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+</style>
+<div id="content">
+  <div class="pdf-section" #content>
+    <h1>Mon document PDF</h1>
+    <table>
+      <tr>
+        <td>
+          Structure
+        </td>
+        <td>
+            {{ structure }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Organes de liaisons
+        </td>
+        <td>
+          {{ organe }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Tablier
+        </td>
+        <td>
+          {{ tablier }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Mécanisme
+
+        </td>
+        <td>
+          {{ mecanisme }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dispositif d\'arrêt et de maintien à l\'arrêt
+
+        </td>
+        <td>
+          {{ dispositifArret }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dispositif de sécurité
+        </td>
+        <td>
+          {{ dispositifSecurite }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Manoeuvre de secours
+        </td>
+        <td>
+          {{ manoeuvreDepanage }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Signalisation / Eclairage
+        </td>
+        <td>
+          {{ signalisation }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Equipemebts électriques
+        </td>
+        <td>
+          {{ equipement }}
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="pdf-section" #content>
+    <h2>Section 2</h2>
+    <p>Contenu de la section 2</p>
+  </div>
+</div>

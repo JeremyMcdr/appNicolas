@@ -11,6 +11,7 @@ import {VerificationPorteComponent} from "./verification-porte/verification-port
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'default', component: DefaultComponent, canActivate: [AuthGuard] },
   { path: 'ajout-user', component: AjoutUtilisateurComponent, canActivate: [AuthGuard] },
