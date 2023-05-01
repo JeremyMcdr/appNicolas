@@ -7,13 +7,14 @@ import {User} from "../../models/user.model";
 })
 export class UserDataService {
   private apiUrl = 'http://macadre.fr:3000/api';
-  private apiKey = 'testicule';
+  private apiKey = '6554sdf654sdf';
+  private userApi = 7;
 
   constructor(private http: HttpClient) {
   }
 
   getUsers(): Observable<User[]> {
-    const headers = new HttpHeaders({'x-api-key': this.apiKey});
+    const headers = new HttpHeaders({'x-user-id': this.userApi,'x-api-key': this.apiKey});
     return this.http.get<User[]>(`${this.apiUrl}/users`, {headers});
   }
 
