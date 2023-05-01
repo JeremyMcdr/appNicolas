@@ -10,8 +10,8 @@ import {porteEntreprise} from "../../models/porteEntreprise.model";
 })
 export class EntrepriseDataService {
 
-  private apiUrl = 'http://localhost:3000/api';
-  private apiUrlEntreprise = 'http://localhost:3000/api/entreprise';
+  private apiUrl = 'http://macadre.fr:3000/api';
+  private apiUrlEntreprise = 'http://macadre.fr:3000/api/entreprise';
   private apiKey = 'testicule';
   private _id: any;
 

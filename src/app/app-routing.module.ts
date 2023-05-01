@@ -8,6 +8,7 @@ import {DefaultComponent} from "./default/default.component";
 import {AppComponent} from "./app.component";
 import {EntreprisesComponent} from "./entreprises/entreprises.component";
 import {VerificationPorteComponent} from "./verification-porte/verification-porte.component";
+import {FormulaireVisuComponent} from "./formulaire-visu/formulaire-visu.component";
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },
   { path: 'entreprises', component: EntreprisesComponent, canActivate: [AuthGuard] },
   { path: 'verification-porte', component: VerificationPorteComponent, canActivate: [AuthGuard] },
+  { path: 'affichageTruc', component: FormulaireVisuComponent },
 
 ];
 

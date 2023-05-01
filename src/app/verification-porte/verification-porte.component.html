@@ -1,146 +1,73 @@
-
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div>
-    <h1>STRUCTURE</h1>
-    <label for="structure">Nom:</label>
-    <input type="text" id="structure" formControlName="structure">
-  </div>
-  <div>
-    <h1>ORGANES DE LIAISON ET DE SUSPENSION</h1>
-    <label for="organe">Email:</label>
-    <input type="text" id="organe" formControlName="organe">
-  </div>
-  <div>
-    <h1>TABLIER</h1>
-    <label for="tablier">Message:</label>
-    <input type="text" id="tablier" formControlName="tablier">
-  </div>
-  <div>
-    <h1>MECANISME</h1>
-    <label for="mecanisme">Message:</label>
-    <input type="text" id="mecanisme" formControlName="mecanisme">
-  </div>
-  <div>
-    <h1>DISPOSITIF D'ARRET ET DE MAINTIEN A L'ARRET</h1>
-    <label for="dispoArretMaintien">Message:</label>
-    <input type="text" id="dispoArretMaintien" formControlName="dispoArretMaintien">
-  </div>
-  <div>
-    <h1>DISPOSITIFS DE SECURITE</h1>
-    <label for="dispoSecu">Message:</label>
-    <input type="text" id="dispoSecu" formControlName="dispoSecu">
-  </div>
-  <div>
-    <h1>MANOEUVRE DE DEPANNAGE</h1>
-    <label for="manoeuvre">Message:</label>
-    <input type="text" id="manoeuvre" formControlName="manoeuvre">
-  </div>
-  <div>
-    <h1>SIGNALISATION / ECLAIRAGE</h1>
-    <label for="signalisation">Message:</label>
-    <input type="text" id="signalisation" formControlName="signalisation">
-  </div>
-  <div>
-    <h1>EQUIPEMENT ELECTRIQUE</h1>
-    <label for="equipementElect">Message:</label>
-    <input type="text" id="equipementElect" formControlName="equipementElect">
-  </div>
-  <button type="submit">Sauvegarder</button>
+  <!-- Ajoutez les autres champs de formulaire de la même manière -->
+  <table>
+    <tr>
+      <td>Structure</td>
+      <td>Ref</td>
+    </tr>
+    <tr>
+      <td>
+        <p>Organes de fixation et d’assemblage</p>
+        <br>
+        <p>Eléments de guidage et d’articulation</p>
+      </td>
+      <td>
+        <mat-form-field appearance="outline">
+          <mat-label>Structure</mat-label>
+          <input matInput formControlName="organe" required />
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Structure</mat-label>
+          <input matInput formControlName="organe" required />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <mat-form-field appearance="outline">
+    <mat-label>Organe</mat-label>
+    <input matInput formControlName="organe" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>tablier</mat-label>
+    <input matInput formControlName="organe" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>mecanisme</mat-label>
+    <input matInput formControlName="organe" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>dispoArretMaintien</mat-label>
+    <input matInput formControlName="organe" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>dispoSecu</mat-label>
+    <input matInput formControlName="organe" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>manoeuvre</mat-label>
+    <input matInput formControlName="organe" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>signalisation</mat-label>
+    <textarea matInput></textarea>
+    <input matInput formControlName="organe" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>equipementElect</mat-label>
+    <input matInput formControlName="organe" required />
+  </mat-form-field>
+
+
+
+  <!-- ... -->
+
+  <button mat-raised-button color="primary" type="submit">Envoyer</button>
 </form>
-
-<style>
-  table {
-    border-collapse: collapse;
-    border: 2px solid black;
-  }
-
-  th, td {
-    border: 1px solid black;
-    padding: 10px;
-  }
-</style>
-<div id="content">
-  <div class="pdf-section" #content>
-    <h1>Mon document PDF</h1>
-    <table>
-      <tr>
-        <td>
-          Structure
-        </td>
-        <td>
-            {{ structure }}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Organes de liaisons
-        </td>
-        <td>
-          {{ organe }}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Tablier
-        </td>
-        <td>
-          {{ tablier }}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Mécanisme
-
-        </td>
-        <td>
-          {{ mecanisme }}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Dispositif d\'arrêt et de maintien à l\'arrêt
-
-        </td>
-        <td>
-          {{ dispositifArret }}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Dispositif de sécurité
-        </td>
-        <td>
-          {{ dispositifSecurite }}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Manoeuvre de secours
-        </td>
-        <td>
-          {{ manoeuvreDepanage }}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Signalisation / Eclairage
-        </td>
-        <td>
-          {{ signalisation }}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Equipemebts électriques
-        </td>
-        <td>
-          {{ equipement }}
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="pdf-section" #content>
-    <h2>Section 2</h2>
-    <p>Contenu de la section 2</p>
-  </div>
-</div>

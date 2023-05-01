@@ -1,29 +1,30 @@
-<h1>Entreprise List</h1>
-<ul>
-  <li *ngFor="let entreprise of entreprises">
-    {{ entreprise.nom }} {{ entreprise.localisation }}
-    <button (click)="loadporteEntreprises(entreprise.id)">Accès à la listes des portes {{entreprise.id}}</button>
-  </li>
+<div class="centered-container">
+  <h1>Entreprise List</h1>
+  <ul>
+    <li *ngFor="let entreprise of entreprises">
+      {{ entreprise.nom }} {{ entreprise.localisation }}
+      <button (click)="loadporteEntreprises(entreprise.id)">Accès à la listes des portes {{entreprise.id}}</button>
+    </li>
 
-</ul>
-<!--Vérification si le module est chargé-->
-<ul *ngIf="isCharged">
-  <li *ngFor="let porte of porteEntreprise">
-    Référence de la porte : {{ porte.reference }}<br>
-    Désingation : {{porte.designation}}<br>
-    Repère d'installation : {{porte.repereInstallation}}<br>
-    constructeur : {{porte.constructeur}}<br>
-    Numéro de la salle : {{porte.constructeur}}<br>
-    <div *ngIf="porte.anneeMiseService !== '0000-00-00'">
-      Année de mise en service : {{porte.anneeMiseService}} <br>
-    </div>
-    <div *ngIf="porte.anneeMiseService == '0000-00-00'">
-      Année de mise en service : NC <br>
-    </div>
-    Hauteur: {{porte.hauteur}}<br>
-    Largeur: {{porte.largeur}}<br>
-    <button (click)="startingControle(porte.id)">Effectuer le contrôle</button>
-    <hr>
-
-  </li>
-</ul>
+  </ul>
+  <!--Vérification si le module est chargé-->
+  <ul *ngIf="isCharged">
+    <li *ngFor="let porte of porteEntreprise">
+      Référence de la porte : {{ porte.reference }}<br>
+      Désingation : {{porte.designation}}<br>
+      Repère d'installation : {{porte.repereInstallation}}<br>
+      constructeur : {{porte.constructeur}}<br>
+      Numéro de la salle : {{porte.constructeur}}<br>
+      <div *ngIf="porte.anneeMiseService !== '0000-00-00'">
+        Année de mise en service : {{porte.anneeMiseService}} <br>
+      </div>
+      <div *ngIf="porte.anneeMiseService == '0000-00-00'">
+        Année de mise en service : NC <br>
+      </div>
+      Hauteur: {{porte.hauteur}}<br>
+      Largeur: {{porte.largeur}}<br>
+      <button (click)="startingControle(porte.id)">Effectuer le contrôle</button>
+      <hr>
+    </li>
+  </ul>
+</div>

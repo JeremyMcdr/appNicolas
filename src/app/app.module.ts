@@ -13,6 +13,11 @@ import { LoginComponent } from './login/login.component';
 import { DefaultComponent } from './default/default.component';
 import { EntreprisesComponent } from './entreprises/entreprises.component';
 import { VerificationPorteComponent } from './verification-porte/verification-porte.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from "@angular/material/button";
+import { FormulaireVisuComponent } from './formulaire-visu/formulaire-visu.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,7 @@ import { VerificationPorteComponent } from './verification-porte/verification-po
     DefaultComponent,
     EntreprisesComponent,
     VerificationPorteComponent,
+    FormulaireVisuComponent,
 
   ],
   imports: [
@@ -33,6 +39,10 @@ import { VerificationPorteComponent } from './verification-porte/verification-po
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

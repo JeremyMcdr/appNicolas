@@ -6,7 +6,7 @@ import {User} from "../../models/user.model";
   providedIn: 'root'
 })
 export class UserDataService {
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = 'http://macadre.fr:3000/api';
   private apiKey = 'testicule';
 
   constructor(private http: HttpClient) {
